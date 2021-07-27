@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
     public static void saludo(){
-        System.out.println("########################################");
+        System.out.println("############################################");
         System.out.println("Aplicación Calcular Número de la Suerte");
-        System.out.println("########################################");
+        System.out.println("############################################");
     }
     public static String pedirFechaNacimiento() {
         Scanner sc = new Scanner(System.in);
