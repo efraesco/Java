@@ -30,7 +30,7 @@ public class Ejercicio1 {
             resultado += Integer.parseInt(partes[i]);
         }
         
-        System.out.println("Primer resultado: " + resultado);
+        System.out.println("Primer resultado suma de Año+Mes+Dia: " + resultado);
         
         Integer porcion = resultado;
 
