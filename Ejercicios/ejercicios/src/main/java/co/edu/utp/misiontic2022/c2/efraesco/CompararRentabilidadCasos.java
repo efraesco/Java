@@ -2,31 +2,33 @@ package co.edu.utp.misiontic2022.c2.efraesco;
 
 import java.lang.Math;
 
-public class CompararRentabilidad {
+public class CompararRentabilidadCasos {
     // ---------------------------------------------
     // Atributos
     // ---------------------------------------------
     private Integer ValorProducto;
     private Integer Tiempo;
     private Double Interes;
+    
     // ---------------------------------------------
     // Constructores
     // ---------------------------------------------
-    public CompararRentabilidad()
+
+    public CompararRentabilidadCasos()
     {
         this.Tiempo =0;
         this.ValorProducto = 0;
         this.Interes = 0.0;        
     }
 
-    public CompararRentabilidad(Integer pTiempo, Integer pValorProducto, Double pInteres)
+    public CompararRentabilidadCasos(Integer pTiempo, Integer pValorProducto, Double pInteres)
     {
         this.Tiempo = pTiempo;
         this.ValorProducto = pValorProducto;
         this.Interes = pInteres / 100.0;        
     }
 
-    public CompararRentabilidad(Integer pTiempo, Integer pValorProducto, Integer pInteres)
+    public CompararRentabilidadCasos(Integer pTiempo, Integer pValorProducto, Integer pInteres)
     {
         this.Tiempo = pTiempo;
         this.ValorProducto = pValorProducto;
@@ -36,6 +38,7 @@ public class CompararRentabilidad {
     // ---------------------------------------------
     // Métodos
     // ---------------------------------------------
+    
     public Integer calcularInteresSimple() {
         Double interesSimple = this.ValorProducto * this.Interes * this.Tiempo;
         interesSimple = (double) Math.round(interesSimple);
@@ -49,7 +52,7 @@ public class CompararRentabilidad {
         System.out.println(interesCompuesto.intValue());
         return interesCompuesto.intValue();
     }
- 
+
     public String compararRentabilidad(Integer pTiempo, Integer pValorProducto, Integer pInteres)
     {
         this.Tiempo = pTiempo;
@@ -79,14 +82,5 @@ public class CompararRentabilidad {
         }
     }
 
-    public static void main(String[] args) {
-        CompararRentabilidad comparar1 = new CompararRentabilidad();
-        System.out.println(comparar1.compararRentabilidad(12,2000000,5.5)); 
-        System.out.println("................................................"); 
-        CompararRentabilidad comparar2 = new CompararRentabilidad();
-        System.out.println(comparar2.compararRentabilidad(12,2000000,5));
-        System.out.println("................................................"); 
-        CompararRentabilidad comparar3 = new CompararRentabilidad();
-        System.out.println(comparar3.compararRentabilidad());
-    }
+       
 }
