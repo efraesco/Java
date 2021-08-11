@@ -1,0 +1,31 @@
+# Modelamiento Empresa - Empleado - Directivo
+@startuml
+title Modelamiento Empresa - Empleado - Directivo
+class Empresa {
+  - nit
+  - telefono
+}
+
+abstract class Persona {
+  - nombre
+  - edad
+  + mostrarDatos()
+}
+
+class Empleado extends Persona {
+  - sueldoBruto
+}
+
+class Cliente extends Persona {
+  - telefonoContacto
+}
+
+class Directivo extends Empleado {
+  - categoria 
+}
+
+Directivo *-- Empleado
+Empresa o-- Cliente
+Directivo "1" -- "1..10" Empleado
+
+@enduml
